@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.javatpoint.com/dbms-first-normal-form -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/ec.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/ecommerce.js.download"></script><script async="" src="./DBMS 1NF - javatpoint_files/analytics.js.download"></script><script defer="" src="./DBMS 1NF - javatpoint_files/777"></script><script async="" src="./DBMS 1NF - javatpoint_files/coreid.min.js.download"></script><script async="" src="./DBMS 1NF - javatpoint_files/launcher.min.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/publishertag.prebid.144.js.download"></script>
+
+<script async="" src="./DBMS 1NF - javatpoint_files/clarity.js.download"></script><script async="" src="./DBMS 1NF - javatpoint_files/async-ads.js.download"></script><script async="" src="./DBMS 1NF - javatpoint_files/async-ads.js.download"></script><script src="./DBMS 1NF - javatpoint_files/hadron.js.download"></script><script src="./DBMS 1NF - javatpoint_files/rules-p-54Nt-1NAaEEe0.js.download" async=""></script><script src="./DBMS 1NF - javatpoint_files/quant.js.download" async="" type="text/javascript"></script><script async="" src="./DBMS 1NF - javatpoint_files/lnb0g0hzo4"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/6si.min.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/ga.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/f.txt"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/f.txt"></script><script async="" src="./DBMS 1NF - javatpoint_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BMVLE5WY82');
+</script>
+<title>DBMS 1NF - javatpoint</title><link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png">
+<link rel="stylesheet" type="text/css" href="./DBMS 1NF - javatpoint_files/link.css" async=""><link rel="dns-prefetch" href="https://clients1.google.com/"><link rel="dns-prefetch" href="https://static.javatpoint.com/"><link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/"><link rel="dns-prefetch" href="https://www.google.com/"><link rel="dns-prefetch" href="https://feedify.net/"><meta name="theme-color" content="#4CAF50"><meta property="og:title" content="DBMS 1NF - javatpoint"><meta property="og:description" content="DBMS 1NF with DBMS Overview, DBMS vs Files System, DBMS Architecture, Three schema Architecture, DBMS Language, DBMS Keys, DBMS Generalization, DBMS Specialization, Relational Model concept, SQL Introduction, Advantage of SQL, DBMS Normalization, Functional Dependency, DBMS Schedule, Concurrency Control etc.">
+<meta name="keywords" content="DBMS Overview, DBMS vs Files System, DBMS Architecture, Three schema Architecture, DBMS Language, DBMS Keys, DBMS Generalization, DBMS Specialization, Relational Model concept, SQL Introduction, Advantage of SQL, DBMS Normalization, Functional Dependency, DBMS Schedule, Concurrency Control"><meta name="description" content="DBMS 1NF with DBMS Overview, DBMS vs Files System, DBMS Architecture, Three schema Architecture, DBMS Language, DBMS Keys, DBMS Generalization, DBMS Specialization, Relational Model concept, SQL Introduction, Advantage of SQL, DBMS Normalization, Functional Dependency, DBMS Schedule, Concurrency Control etc."><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="https://www.javatpoint.com/dbms-first-normal-form">
+<meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta name="twitter:title" property="og:title" content="DBMS 1NF - javatpoint"><meta name="twitter:description" property="og:description" content="DBMS 1NF with DBMS Overview, DBMS vs Files System, DBMS Architecture, Three schema Architecture, DBMS Language, DBMS Keys, DBMS Generalization, DBMS Specialization, Relational Model concept, SQL Introduction, Advantage of SQL, DBMS Normalization, Functional Dependency, DBMS Schedule, Concurrency Control etc."><meta property="og:url" content="https://www.javatpoint.com/dbms-first-normal-form"><meta property="og:site_name" content="www.javatpoint.com"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@pagejavatpoint"><meta name="twitter:domain" content="www.javatpoint.com"><meta name="twitter:creator" content="@pagejavatpoint">
+<link href="https://www.javatpoint.com/manifest.json" rel="manifest">
+<script data-cfasync="false" type="text/javascript">
+(function(w, d) {
+	var s = d.createElement('script');
+	s.src = '//cdn.adpushup.com/37780/adpushup.js';
+	s.crossOrigin='anonymous'; 
+	s.type = 'text/javascript'; s.async = true;
+	(d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+	w.adpushup = w.adpushup || {que:[]};
+})(window, document);
+
+</script><script src="./DBMS 1NF - javatpoint_files/adpushup.js.download" crossorigin="anonymous" type="text/javascript" async=""></script>
+<script data-cfasync="false" type="text/javascript">
+!function(e,t){var siteId = "37784";
+var r,a;let o=function(){var e=t.createElement("script");e.id="lzORaekbHNiuS",e["data-cfasync"]="false",e.src="//html-load.com/loader.min.js",e.charset="UTF-8",e.data="svmmawaaasa0njevas3ascattafa3aga6katacaseva05atkevarkka0asaga05qkacasa0kema0ayfevevasagara6ketacasngauefa03gatnafa3asa7cayattafa3a7as9e2",e.onload=function(){let e=!1,t=Math.random().toString(),r="html-load.com";window.addEventListener("message",r=>{r.data===t+"_as_res"&&(e=!0)}),window.setTimeout(()=>{if(!e){let t="Failed to load website properly since "+r+" is blocked. Please allow "+r;throw alert(t),fetch("https://error-report.com/report?type=loader_light&url="+btoa(location.href)+"&error="+btoa(t),{method:"POST"}).then(e=>e.text()).then(e=>{let r=document.createElement("iframe");r.src="https://info.error-report.com/modal?eventId="+e+"&error="+btoa(t),r.setAttribute("style","width: 100vw; height: 100vh; z-index: 2147483647; position: fixed; left: 0; top: 0;"),document.body.appendChild(r);let a=e=>{"close-error-report"===e.data&&(r.remove(),window.removeEventListener("message",a))};window.addEventListener("message",a)}).catch(e=>{confirm(navigator.language.toLowerCase().startsWith("ko")?"잘못된 애드블록 필터로 웹페이지 로딩에 실패하였습니다. 애드블록을 비활성화한 후 웹사이트를 이용해주세요. (자세한 내용은 '확인' 버튼을 눌러 확인해주세요)":"This page could not be loaded properly due to incorrect / bad filtering rule(s) of adblockers in use. Please disable all adblockers to continue using the website. (click OK if you'd like to learn more)")?location.href="https://info.error-report.com/modal?eventId=&error="+btoa(e.toString()):location.reload()}),Error(t)}},1e3),window.postMessage(t+"_as_req","*")},e.onerror=function(){let e=document.getElementById("lzORaekbHNiuS"),t=document.createElement("script");for(let r=0;r<e.attributes.length;r++)t.setAttribute(e.attributes[r].name,e.attributes[r].value);let a=new window.URL(e.src),o=["html-load.com","fb.html-load.com","content-loader.com","fb.content-loader.com"];if(void 0===window.as_retry&&(window.as_retry=0),window.as_retry>=o.length){let n="Failed to load website properly since "+o[0]+" is blocked. Please allow "+o[0];throw alert(n),fetch("https://error-report.com/report?type=loader_light&url="+btoa(location.href)+"&error="+btoa(n),{method:"POST"}).then(e=>e.text()).then(e=>{let t=document.createElement("iframe");t.src="https://info.error-report.com/modal?eventId="+e+"&error="+btoa(n),t.setAttribute("style","width: 100vw; height: 100vh; z-index: 2147483647; position: fixed; left: 0; top: 0;"),document.body.appendChild(t);let r=e=>{"close-error-report"===e.data&&(t.remove(),window.removeEventListener("message",r))};window.addEventListener("message",r)}).catch(e=>{confirm(navigator.language.toLowerCase().startsWith("ko")?"잘못된 애드블록 필터로 웹페이지 로딩에 실패하였습니다. 애드블록을 비활성화한 후 웹사이트를 이용해주세요. (자세한 내용은 '확인' 버튼을 눌러 확인해주세요)":"This page could not be loaded properly due to incorrect / bad filtering rule(s) of adblockers in use. Please disable all adblockers to continue using the website. (click OK if you'd like to learn more)")?location.href="https://info.error-report.com/modal?eventId=&error="+btoa(e.toString()):location.reload()}),Error(n)}a.host=o[window.as_retry++],t.setAttribute("src",a.href),t.setAttribute("as-async","true"),e.setAttribute("id",e.getAttribute("id")+"_"),e.parentNode.insertBefore(t,e),e.remove()},(t.getElementsByTagName("head")[0]||t.getElementsByTagName("body")[0]).appendChild(e)},n=function(r,a,o){var n=e.Image?new Image:t.createElement("img");n.onload=function(e){a&&"function"==typeof a&&a()},n.onerror=function(e){o&&"function"==typeof o&&o()},n.src=r};(r=t.createElement("script")).src="//delivery.adrecover.com/"+siteId+"/adRecover.js",r.type="text/javascript",r.async=!0,(t.getElementsByTagName("head")[0]||t.getElementsByTagName("body")[0]).appendChild(r),a=function(e){e||o()},n("//delivery.adrecover.com/block.jpg",function(){a(!1)},function(){n("//delivery.adrecover.com/allow.jpg",function(){a(!0)},function(){a(!1)})})}(window,document);
+</script><script src="./DBMS 1NF - javatpoint_files/adRecover.js.download" type="text/javascript" async=""></script>
+<script>(function(){{const e=RegExp.prototype.test;RegExp.prototype.test=function(t){return e.call(this,t)}}["requestAnimationFrame","requestIdleCallback","setInterval","setTimeout"].filter((e=>window[e])).forEach((e=>window[e]=t(window[e],e))),EventTarget.prototype.addEventListener=t(EventTarget.prototype.addEventListener,"addEventListener",1),EventTarget.prototype.removeEventListener=t(EventTarget.prototype.removeEventListener,"removeEventListener",1);const e=new Map;function t(t,n,r=0){return function(...i){const o=i.slice(0,r),s=i[r],l=i.slice(r+1);if(!s)return t.call(this,...i);if("setInterval"!==n&&"setTimeout"!==n&&"function"!=typeof s&&"function"!=typeof s.handleEvent)return t.call(this,...i);let a=null;if("addEventListener"===n||"removeEventListener"===n){const t=o[0];e.get(this)||e.set(this,new Map),e.get(this).get(t)||e.get(this).set(t,new Map),a=e.get(this).get(t).get(s)}if(a=a||function(...e){if("function"==typeof s)return s.call(this,...e);if("string"==typeof s)return window.eval(s);if("function"==typeof s.handleEvent)return s.handleEvent.call(s,...e);throw new Error("Failed to register callback - invalid callback type: "+typeof s)},"addEventListener"===n){const t=o[0];e.get(this).get(t).set(s,a)}else if("removeEventListener"===n){const n=o[0],r=e.get(this).get(n).get(s)||s;return e.get(this).get(n).delete(s),t.call(this,...o,r,...l)}return t.call(this,...o,a,...l)}}})()</script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/jquery-3.6.0.min.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/jquery-2.2.2.min.js.download"></script><script src="./DBMS 1NF - javatpoint_files/f(1).txt"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/pb.37780.1719925908452.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/quantcast.js.download"></script><script type="text/javascript">function triggerRequest(e,t){window.adpushup.utils.sendDataToLoggerService(e,t)}!function(){var e=".powered-by-banner { display: none !important; }",t=document.head||document.getElementsByTagName("head")[0],n=document.createElement("style");t.appendChild(n),n.type="text/css",n.styleSheet?n.styleSheet.cssText=e:n.appendChild(document.createTextNode(e))}(),function(){var e,t;window._6si=window._6si||[],window._6si.push(["enableEventTracking",!0]),window._6si.push(["setToken","0a183be4b8f4234161b8d67b351ea76a"]),window._6si.push(["setEndpoint","//b.6sc.co/"]),(e=document.createElement("script")).type="text/javascript",e.async=!0,e.src="//j.6sc.co/6si.min.js",(t=document.getElementsByTagName("script")[0]).parentNode.insertBefore(e,t)}(),function(){var t=window.googletag=window.googletag||{};t.cmd=t.cmd||[],t.cmd.push(function(){!function e(){t.pubadsReady?t.pubads().addEventListener("slotRenderEnded",function(e){try{var t="#"+e.slot.getSlotId().getDomId(),n=window.adpushup.$(t).parent();!e.isEmpty&&1<e.size[0]&&1<e.size[1]?(n.css("height",e.size[1]),n.css("width",e.size[0]),n.css("visibility","visible")):e.isEmpty&&(n.css("height","0px"),n.css("width","0px"),n.css("visibility","hidden"))}catch(e){triggerRequest("JTP_slotRenderEndedError",{msg:JSON.parse(JSON.stringify(e,Object.getOwnPropertyNames(e))),url:window.location.href})}}):setTimeout(e,0)}()})}(),function(){const t=window.adpushup||{};t.que=t.que||[],t.que.push(async function(){var e=await t.utils.sendRequest("//cdn.adpushup.com/lineItems/genieeLineItems.json").then(JSON.parse).then(e=>e.genieeGAMLineItems);t.config.lineItems=[...t.config.lineItems,...e]})}(),function(e,t,n,s){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)};const i=t.createElement(s),o=(i.async=1,i.src="https://www.clarity.ms/tag/lnb0g0hzo4",t.getElementsByTagName(s)[0]);o.parentNode.insertBefore(i,o)}(window,document,"clarity","script"),function(){let e=window.adpushup||{};e.que=window.adpushup.que||[],e.que.push(function(){let e=document.head||document.getElementsByTagName("head")[0];const t=document.createElement("script");t.src="https://cdn.pbxai.com/5f4a4498-4f1f-48c2-94fc-26ecfea898d8.js",t.async=!0,e.appendChild(t)})}(),function(){const e=window._apPbJs||{};(window._apPbJs=e).que=e.que||[],e.que.push(function(){e.setConfig({floors:{enabled:!0}})})}();</script><style type="text/css">.powered-by-banner { display: none !important; }</style><script src="./DBMS 1NF - javatpoint_files/5f4a4498-4f1f-48c2-94fc-26ecfea898d8.js.download" async=""></script><script src="./DBMS 1NF - javatpoint_files/f(1).txt" async=""></script><script async="" src="./DBMS 1NF - javatpoint_files/apstag.js.download"></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9uiHDzQFAhqALUhTgTYJcz9XrGH2y0/9AORwCSapUO/f7Uh7ysIzyszNkuWDLqNYg8446Uj48XIstBW1qv/wAQAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3Mjc4MjcxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9R+gkZL3TWq+Z7RJ2L0c7ZN7FZD5z4mHmVvjrPitg/EMz9P3j5d3W7Vw5ZR9jtJGmWKltM4BO3smNzpCgwYuwwAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3Mjc4MjcxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./DBMS 1NF - javatpoint_files/f(2).txt" async=""></script><script src="./DBMS 1NF - javatpoint_files/2e7e1587-d92f-46dd-8721-80b53eccb87e" type="text/javascript" async="async"></script><script async="" src="./DBMS 1NF - javatpoint_files/103512698"></script><script src="./DBMS 1NF - javatpoint_files/pubcid.min.js.download"></script><script src="./DBMS 1NF - javatpoint_files/sync.min.js.download"></script><script type="text/javascript" async="" src="./DBMS 1NF - javatpoint_files/launcher-stub.min.js.download"></script><script src="./DBMS 1NF - javatpoint_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" href="./DBMS 1NF - javatpoint_files/default+en.css" rel="stylesheet"><link type="text/css" href="./DBMS 1NF - javatpoint_files/espresso.css" rel="stylesheet"><script src="./DBMS 1NF - javatpoint_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" href="./DBMS 1NF - javatpoint_files/default+en.css" rel="stylesheet"><link type="text/css" href="./DBMS 1NF - javatpoint_files/espresso.css" rel="stylesheet"><style type="text/css">.gsc-control-cse{font-family:georgia, arial, serif}.gsc-control-cse .gsc-table-result{font-family:georgia, arial, serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D3BCA1}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#300D00;background-color:#461200;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#461200;border-color:#461200;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#950000;border-color:#950000;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#950000}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#950000}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#950000}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#950000}.gsc-cursor-page{color:#950000}a.gsc-trailing-more-results:link{color:#950000}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl{color:#A25B08}.gs-webResult div.gs-visibleUrl-short{color:#A25B08}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#950000;background-color:#FFFFFF;color:#950000}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#461200;background-color:#FFFFFF;color:#461200}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FEFEDC;background-color:#FFFFCC}.gsc-completion-title{color:#950000}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#A25B08}.gcsc-find-more-on-google{color:#950000}.gcsc-find-more-on-google-magnifier{fill:#950000}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gsc-control-cse{font-family:georgia, arial, serif}.gsc-control-cse .gsc-table-result{font-family:georgia, arial, serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D3BCA1}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#300D00;background-color:#461200;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#461200;border-color:#461200;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#950000;border-color:#950000;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#950000}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#950000}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#950000}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#950000}.gsc-cursor-page{color:#950000}a.gsc-trailing-more-results:link{color:#950000}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl{color:#A25B08}.gs-webResult div.gs-visibleUrl-short{color:#A25B08}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#950000;background-color:#FFFFFF;color:#950000}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#461200;background-color:#FFFFFF;color:#461200}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FEFEDC;background-color:#FFFFCC}.gsc-completion-title{color:#950000}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#A25B08}.gcsc-find-more-on-google{color:#950000}.gcsc-find-more-on-google-magnifier{fill:#950000}</style><style id="_6si-shortening">/* This stylesheet is created by 6sense */
+            .mktoForm .mktoFormRow:has(._6si_sff_filled) {
+                display: none;
+            }
+            .mktoForm .mktoFormRow ._6si_sff_filled {
+                display: none;
+            }
+            .hs-form .hs-form-field:has(._6si_sff_filled) {
+                display: none;
+            }
+            .hs-form .hs-form-field ._6si_sff_filled {
+                display: none;
+            }
+            form.form .form-field:not(.error):has(._6si_sff_filled) {
+                display: none;
+            }
+            form.form .form-field:not(.error) ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form .row:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form .row ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form .field-wrapper:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form .field-wrapper ._6si_sff_filled {
+                display: none;
+            }</style><script async="" src="./DBMS 1NF - javatpoint_files/AGSKWxUa1MyZe3wX2rdgrw2t0Cv_Ib9A_RqhHVdkqMkQOs2ZoAyYcJsWogWuMi4V6OE7ZjoE8QMTpmrYBA01cNwUVPBZYkR6BqZ_d1iFecpI7309EaoxUD_015x-noTcF9cjy7qTkt-orA=="></script><script async="" src="./DBMS 1NF - javatpoint_files/AGSKWxXS5Dg-2-RrTTrg6G2awAgnwImpGlJw8zdPpsqAyWVAncTpHbZJ3SMdjS3nInuEHlcSXah1Xce0Ev4Q0rVNE5ZckN2IKAPm8nImT0-ZYjqiBP95bXu1AYcDj667GJiXjkKujQP29g=="></script><script src="./DBMS 1NF - javatpoint_files/js(1)" async=""></script><script async="" src="./DBMS 1NF - javatpoint_files/AGSKWxX8FszO9wHMy9Qrn5ILzBxnrxpRrel0Q4P-6N-U-K3zv6JyLETQA6ObixPonzxUZSrqQqGecFopjzNKavYQBjdqYMq1c5rWEn2AZK5wq30QkYoKtyHcdYAf19qG5-_P7bskp65ZVw=="></script></head>
+<body onload="highlightlink()">
+
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><table style="width:100%;margin-bottom:5px"> <tbody><tr> <td> <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:10px;margin-right:10px"> <a href="https://www.javatpoint.com/"><img src="./DBMS 1NF - javatpoint_files/jtp-logo3.png" alt="Javatpoint Logo"></a> </div> <div style="float:left;width:60%;"><script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" role="presentation" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" aria-label="search" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb50" aria-hidden="true">�</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><div class="gsc-above-wrapper-area-backfill-container"></div><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div> </div> </td> </tr></tbody></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="./DBMS 1NF - javatpoint_files/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span>
+<span style="float:left"><a href="https://www.javatpoint.com/"><img src="./DBMS 1NF - javatpoint_files/jtp-logo3.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both">
+<script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_1"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id2"><table cellspacing="0" cellpadding="0" role="presentation" id="gs_id51" class="gstl_51 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti51" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" aria-label="search" id="gsc-i-id2" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st51" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb51" aria-hidden="true">�</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><div class="gsc-above-wrapper-area-backfill-container"></div><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+
+</div>
+</div>
+<div id="link" style="clear:both;z-index:999"> <div class="ddsmoothmenu">
+<ul>
+<li><a href="https://www.javatpoint.com/">Home</a></li>
+<li><a href="https://www.javatpoint.com/dbms-tutorial" class="selected">DBMS</a></li>
+<li><a href="https://www.javatpoint.com/sql-tutorial">SQL</a></li>
+<li><a href="https://www.javatpoint.com/pl-sql-tutorial">PL/SQL</a></li>
+<li><a href="https://www.javatpoint.com/sqlite-tutorial">SQLite</a></li>
+<li><a href="https://www.javatpoint.com/mongodb-tutorial">MongoDB</a></li>
+<li><a href="https://www.javatpoint.com/cassandra-tutorial">Cassandra</a></li>
+<li><a href="https://www.javatpoint.com/mysql-tutorial">MySQL</a></li>
+<li><a href="https://www.javatpoint.com/oracle-tutorial">Oracle</a></li>
+<li><a href="https://www.javatpoint.com/couchdb-tutorial">CouchDB</a></li>
+<li><a href="https://www.javatpoint.com/neo4j-tutorial">Neo4j</a></li>
+<li><a href="https://www.javatpoint.com/db2-tutorial">DB2</a></li>
+<li><a href="https://www.javatpoint.com/c-programming-language-tutorial">C</a></li>
+<li><a href="https://www.javatpoint.com/java-tutorial">Java</a></li>
+<li><a href="https://www.javatpoint.com/free-java-projects">Projects</a></li>
+<li><a href="https://www.javatpoint.com/corejava-interview-questions">Interview Q</a></li>
+</ul>
+<br style="clear: left">
+</div></div>
+<div class="mobilemenu" style="clear:both">
+
+</div>
+<div id="menu">
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DBMS Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-tutorial">DBMS Tutorial</a>
+<a href="https://www.javatpoint.com/what-is-database">What is Database</a>
+<a href="https://www.javatpoint.com/types-of-databases">Types of Databases</a>
+<a href="https://www.javatpoint.com/what-is-rdbms" class="l1">What is RDBMS</a>
+<a href="https://www.javatpoint.com/difference-between-dbms-and-rdbms" class="l1">DBMS vs RDBMS</a>
+<a href="https://www.javatpoint.com/dbms-vs-files-system">DBMS vs File System</a>
+<a href="https://www.javatpoint.com/dbms-architecture">DBMS Architecture</a>
+<a href="https://www.javatpoint.com/dbms-three-schema-architecture">Three schema Architecture</a>
+<a href="https://www.javatpoint.com/data-models">Data Models</a>
+<a href="https://www.javatpoint.com/dbms-data-model-schema-and-instance">Data model schema</a>
+<a href="https://www.javatpoint.com/dbms-data-independence">Data Independence</a>
+<a href="https://www.javatpoint.com/dbms-language">DBMS Language</a>
+<a href="https://www.javatpoint.com/acid-properties-in-dbms">ACID Properties in DBMS</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Data modeling</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-er-model-concept">ER model concept</a>
+<a href="https://www.javatpoint.com/dbms-notation-of-er-diagram">Notation for ER diagram</a>
+<a href="https://www.javatpoint.com/dbms-er-design-issues">ER Design Issues</a>
+<a href="https://www.javatpoint.com/dbms-mapping-constraints">Mapping constraints</a>
+<a href="https://www.javatpoint.com/dbms-keys">DBMS Keys</a>
+<a href="https://www.javatpoint.com/dbms-generalization">DBMS Generalization</a>
+<a href="https://www.javatpoint.com/dbms-specialization">DBMS Specialization</a>
+<a href="https://www.javatpoint.com/dbms-aggregation">DBMS Aggregation</a>
+<a href="https://www.javatpoint.com/dbms-reduction-of-er-diagram-into-table">Convert ER into table</a>
+<a href="https://www.javatpoint.com/dbms-relationship-of-higher-degree">Relationship of Higher Degree</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Relational data Model</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-relational-model-concept">Relational Model concept</a>
+<a href="https://www.javatpoint.com/dbms-relational-algebra">Relational Algebra</a>
+<a href="https://www.javatpoint.com/dbms-join-operation">Join Operation</a>
+<a href="https://www.javatpoint.com/dbms-integrity-constraints">Integrity Constraints</a>
+<a href="https://www.javatpoint.com/dbms-relational-calculus">Relational Calculus</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Normalization</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-functional-dependency">Functional Dependency</a>
+<a href="https://www.javatpoint.com/dbms-inference-rule">Inference Rule</a>
+<a href="https://www.javatpoint.com/dbms-normalization">DBMS Normalization</a>
+<a href="https://www.javatpoint.com/dbms-first-normal-form">DBMS 1NF</a>
+<a href="https://www.javatpoint.com/dbms-second-normal-form">DBMS 2NF</a>
+<a href="https://www.javatpoint.com/dbms-third-normal-form">DBMS 3NF</a>
+<a href="https://www.javatpoint.com/dbms-boyce-codd-normal-form">DBMS BCNF</a>
+<a href="https://www.javatpoint.com/dbms-forth-normal-form">DBMS 4NF</a>
+<a href="https://www.javatpoint.com/dbms-fifth-normal-form">DBMS 5NF</a>
+<a href="https://www.javatpoint.com/dbms-relational-decomposition">Relational Decomposition</a>
+<a href="https://www.javatpoint.com/dbms-multivalued-dependency">Multivalued Dependency</a>
+<a href="https://www.javatpoint.com/dbms-join-dependency">Join Dependency</a>
+<a href="https://www.javatpoint.com/dbms-inclusion-dependence">Inclusion Dependence</a>
+<a href="https://www.javatpoint.com/dbms-canonical-cover">Canonical Cover</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Transaction Processing</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-transaction-processing-concept">Transaction</a>
+<a href="https://www.javatpoint.com/dbms-transaction-property">Transaction Property</a>
+<a href="https://www.javatpoint.com/dbms-states-of-transaction">States of Transaction</a>
+<a href="https://www.javatpoint.com/dbms-schedule">DBMS Schedule</a>
+<a href="https://www.javatpoint.com/dbms-testing-of-serializability">Testing of Serializability</a>
+<a href="https://www.javatpoint.com/dbms-conflict-serializable-schedule">Conflict schedule</a>
+<a href="https://www.javatpoint.com/dbms-view-serializability">View Serializability</a>
+<a href="https://www.javatpoint.com/dbms-recoverability-of-schedule">Recoverability of Schedule</a>
+<a href="https://www.javatpoint.com/dbms-failure-classification">Failure Classification</a>
+<a href="https://www.javatpoint.com/dbms-log-based-recovery">Log-Based Recovery</a>
+<a href="https://www.javatpoint.com/dbms-checkpoint">DBMS Checkpoint</a>
+<a href="https://www.javatpoint.com/deadlock-in-dbms">Deadlock in DBMS</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Concurrency Control</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-concurrency-control">Concurrency Control</a>
+<a href="https://www.javatpoint.com/dbms-lock-based-protocol">Lock based Protocol</a>
+<a href="https://www.javatpoint.com/dbms-timestamp-ordering-protocol">Time stamping Protocol</a>
+<a href="https://www.javatpoint.com/dbms-validation-based-protocol">Validation based Protocol</a>
+<a href="https://www.javatpoint.com/dbms-thomas-write-rule">Thomas Write Rule</a>
+<a href="https://www.javatpoint.com/dbms-multiple-granularity">Multiple Granularity</a>
+<a href="https://www.javatpoint.com/dbms-recovery-concurrent-transaction">Recovery Concurrent Transaction</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">File organization</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-file-organization">File organization</a>
+<a href="https://www.javatpoint.com/dbms-sequential-file-organization">Sequential File Organization</a>
+<a href="https://www.javatpoint.com/dbms-heap-file-organization">Heap File Organization</a>
+<a href="https://www.javatpoint.com/dbms-hash-file-organization">Hash File Organization</a>
+<a href="https://www.javatpoint.com/dbms-b-plus-file-organization">B+ File Organization</a>
+<a href="https://www.javatpoint.com/dbms-indexed-sequential-access-method">DBMS ISAM</a>
+<a href="https://www.javatpoint.com/dbms-cluster-file-organization">Cluster File Organization</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Indexing and B+ Tree</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/indexing-in-dbms">Indexing in DBMS</a>
+<a href="https://www.javatpoint.com/dbms-b-plus-tree">B+ Tree</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Hashing</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-hashing">Hashing</a>
+<a href="https://www.javatpoint.com/dbms-static-hashing">Static Hashing</a>
+<a href="https://www.javatpoint.com/dbms-dynamic-hashing">Dynamic Hashing</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">RAID</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-raid">RAID</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Misc</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/decomposition-algorithms">Decomposition Algorithms</a>
+<a href="https://www.javatpoint.com/storage-system-in-dbms">Storage System in DBMS</a>
+<a href="https://www.javatpoint.com/data-dictionary-storage">Data Dictionary Storage</a>
+<a href="https://www.javatpoint.com/file-organization-storage">File Organization Storage</a>
+<a href="https://www.javatpoint.com/selection-of-raid-levels">Selection of RAID Levels</a>
+<a href="https://www.javatpoint.com/bitmap-indexing">Bitmap Indexing</a>
+<a href="https://www.javatpoint.com/buffer-replacement-strategies">Buffer Replacement Strategies</a>
+<a href="https://www.javatpoint.com/database-buffer">Database Buffer</a>
+<a href="https://www.javatpoint.com/estimating-query-cost">Estimating Query Cost</a>
+<a href="https://www.javatpoint.com/query-processing-in-dbms">Query Processing in DBMS</a>
+<a href="https://www.javatpoint.com/evaluation-of-expressions">Evaluation of Expressions</a>
+<a href="https://www.javatpoint.com/external-sort-merge-algorithm">External Sort-Merge Algorithm</a>
+<a href="https://www.javatpoint.com/hash-join-algorithm">Hash Join Algorithm</a>
+<a href="https://www.javatpoint.com/materialization-in-query-processing">Materialization in Query Processing</a>
+<a href="https://www.javatpoint.com/merge-join-algorithm">Merge Join Algorithm</a>
+<a href="https://www.javatpoint.com/nested-loop-join-algorithm">Nested-Loop Join Algorithm</a>
+<a href="https://www.javatpoint.com/selection-operation-in-query-processing">Selection Operation in Query Processing</a>
+<a href="https://www.javatpoint.com/double-pipelined-join-algorithm">Double-Pipelined Join Algorithm</a>
+<a href="https://www.javatpoint.com/implementation-of-pipelining">Implementation of Pipelining</a>
+<a href="https://www.javatpoint.com/pipelining-in-query-processing">Pipelining in Query Processing</a>
+<a href="https://www.javatpoint.com/dbms-advanced-query-optimization">Advanced Query Optimization</a>
+<a href="https://www.javatpoint.com/dbms-transforming-relational-expressions">Transforming Relational Expressions</a>
+<a href="https://www.javatpoint.com/dbms-candidate-key">Candidate Key</a>
+<a href="https://www.javatpoint.com/dbms-closure-of-an-attribute">Closure of an Attribute</a>
+<a href="https://www.javatpoint.com/dbms-questions-on-boyce-codd-normal-form">QUESTIONS ON BOYCE CODD NORMAL FORM</a>
+<a href="https://www.javatpoint.com/dbms-questions-on-normalization">QUESTIONS ON NORMALIZATION</a>
+<a href="https://www.javatpoint.com/dbms-questions-on-third-normal-form">QUESTIONS ON THIRD NORMAL FORM</a>
+<a href="https://www.javatpoint.com/dbms-equivalence-of-functional-dependency">EQUIVALENCE OF FUNCTIONAL DEPENDENCY</a>
+<a href="https://www.javatpoint.com/dbms-referential-integrity-constraint">Referential Integrity constraint</a>
+<a href="https://www.javatpoint.com/dbms-questions-on-lossy-and-lossless-decomposition">Questions on Lossy and Lossless Decomposition</a>
+<a href="https://www.javatpoint.com/dbms-lossy-and-lossless-decomposition-second-method">LOSSY OR LOSSLESS DECOMPOSITION (second method)</a>
+<a href="https://www.javatpoint.com/dbms-questions-to-identify-normal-form">QUESTIONS TO IDENTIFY NORMAL FORM</a>
+<a href="https://www.javatpoint.com/types-of-relationship-in-database-table">Types of Relationship in Database Table</a>
+<a href="https://www.javatpoint.com/candidate-key-in-dbms">Candidate Key in DBMS</a>
+<a href="https://www.javatpoint.com/primary-key-in-dbms">Primary Key in DBMS</a>
+<a href="https://www.javatpoint.com/super-key-in-dbms">Super Key in DBMS</a>
+<a href="https://www.javatpoint.com/alternate-key-in-dbms">Alternate Key in DBMS</a>
+<a href="https://www.javatpoint.com/composite-key-in-dbms">Composite Key in DBMS</a>
+<a href="https://www.javatpoint.com/foreign-key-in-dbms">Foreign Key in DBMS</a>
+<a href="https://www.javatpoint.com/surrogate-key-in-dbms">Surrogate Key in DBMS</a>
+<a href="https://www.javatpoint.com/unique-key-in-dbms">Unique Key in DBMS</a>
+<a href="https://www.javatpoint.com/dbms-purpose-of-normalization">Purpose of Normalization</a>
+<a href="https://www.javatpoint.com/commit-vs-rollback-in-sql">COMMIT vs ROLLBACK in SQL</a>
+<a href="https://www.javatpoint.com/ddl-vs-dml">DDL vs DML</a>
+<a href="https://www.javatpoint.com/denormalization-in-databases">Denormalization in Databases</a>
+<a href="https://www.javatpoint.com/er-model-vs-relational-model">ER Model vs Relational Model</a>
+<a href="https://www.javatpoint.com/database-security">Database Security</a>
+<a href="https://www.javatpoint.com/problems-with-er-model">Problems with ER Model</a>
+<a href="https://www.javatpoint.com/advantages-of-dbms">Advantages of DBMS</a>
+<a href="https://www.javatpoint.com/advantages-and-disadvantages-of-dbms">Advantages and Disadvantages of DBMS</a>
+<a href="https://www.javatpoint.com/commit-protocol-in-dbms">COMMIT Protocol in DBMS</a>
+<a href="https://www.javatpoint.com/anomalies-in-dbms">Anomalies in DBMS</a>
+<a href="https://www.javatpoint.com/functions-of-dbms">Functions of DBMS</a>
+<a href="https://www.javatpoint.com/dbms-examples">DBMS Examples</a>
+<a href="https://www.javatpoint.com/entity-in-dbms">Entity in DBMS</a>
+<a href="https://www.javatpoint.com/characteristics-of-dbms">Characteristics of DBMS</a>
+<a href="https://www.javatpoint.com/components-of-dbms">Components of DBMS</a>
+<a href="https://www.javatpoint.com/disadvantages-of-dbms">Disadvantages of DBMS</a>
+<a href="https://www.javatpoint.com/instance-and-schema-in-dbms">Instance and Schema in DBMS</a>
+<a href="https://www.javatpoint.com/data-abstraction-in-dbms">Data Abstraction in DBMS</a>
+<a href="https://www.javatpoint.com/database-applications">Database Applications</a>
+<a href="https://www.javatpoint.com/redundancy-in-dbms">Redundancy in DBMS</a>
+<a href="https://www.javatpoint.com/advantages-of-dbms-over-file-system">Advantages of DBMS over File System</a>
+<a href="https://www.javatpoint.com/attributes-in-dbms">Attributes in DBMS</a>
+<a href="https://www.javatpoint.com/difficulties-of-implementing-data-warehouses">Difficulties of Implementing Data Warehouses</a>
+<a href="https://www.javatpoint.com/economic-factors-choice-of-dbms">Economic Factors (Choice of DBMS)</a>
+<a href="https://www.javatpoint.com/enhanced-er-model">Enhanced ER Model</a>
+<a href="https://www.javatpoint.com/how-to-find-candidate-key-from-functional-dependencies">How to Find Candidate Key from Functional Dependencies</a>
+<a href="https://www.javatpoint.com/how-to-store-a-password-in-database">How to Store a Password in Database</a>
+<a href="https://www.javatpoint.com/timestamp-and-deadlock-prevention-schemes-in-dbms">Introduction to TimeStamp and Deadlock Prevention Schemes in DBMS</a>
+<a href="https://www.javatpoint.com/minimization-of-er-diagrams">Minimization of ER Diagrams</a>
+<a href="https://www.javatpoint.com/number-of-possible-super-keys-in-dbms">Number of Possible Super Keys in DBMS</a>
+<a href="https://www.javatpoint.com/personnel-involved-in-database-management-system">Personnel Involved in Database Management System</a>
+<a href="https://www.javatpoint.com/role-of-keys-in-cassandra">Role of Keys in Cassandra</a>
+<a href="https://www.javatpoint.com/transactions-in-dbms">Transactions in DBMS</a>
+<a href="https://www.javatpoint.com/tuple-in-dbms">Tuple in DBMS</a>
+<a href="https://www.javatpoint.com/serializability-in-dbms">Serializability in DBMS</a>
+<a href="https://www.javatpoint.com/1-tier-architecture-in-dbms">1 Tier Architecture in DBMS</a>
+<a href="https://www.javatpoint.com/2-tier-architecture-in-dbms">2 Tier Architecture in DBMS</a>
+<a href="https://www.javatpoint.com/centralized-and-client-server-architecture-for-dbms">Centralized and Client Server Architecture for DBMS</a>
+<a href="https://www.javatpoint.com/data-query-language">Data Query Language</a>
+<a href="https://www.javatpoint.com/difference-between-page-table-and-inverted-page-table">Difference Between Page Table and Inverted Page Table</a>
+<a href="https://www.javatpoint.com/distributed-database-architecture-in-dbms">Distributed Database Architecture in DBMS</a>
+<a href="https://www.javatpoint.com/sql-queries-on-clustered-and-non-clustered-indexes">SQL queries on Clustered and Non-Clustered Indexes</a>
+<a href="https://www.javatpoint.com/strategies-for-migrating-from-sql-to-nosql-database">Strategies for Migrating from SQL to NoSQL Database</a>
+<a href="https://www.javatpoint.com/what-are-different-transaction-isolation-levels-in-dbms">What are Different Transaction Isolation Levels in DBMS</a>
+<a href="https://www.javatpoint.com/er-diagram-for-company-database">ER Diagram for Company Database</a>
+<a href="https://www.javatpoint.com/er-diagram-for-employee-management-system">ER Diagram for Employee Management System</a>
+<a href="https://www.javatpoint.com/transaction-isolation-levels-in-dbms">Transaction Isolation Levels in DBMS</a>
+<a href="https://www.javatpoint.com/transitive-dependency-in-dbms">Transitive Dependency in DBMS</a>
+<a href="https://www.javatpoint.com/evolution-of-big-data-and-its-impact-on-database-management-systems">Evolution of Big Data and its Impact on Database Management Systems</a>
+<a href="https://www.javatpoint.com/future-of-database-management-system-predictions-and-trends">Future of Database Management System: Predictions and Trends</a>
+<a href="https://www.javatpoint.com/mobile-databases-in-dbms">Mobile Databases in DBMS</a>
+<a href="https://www.javatpoint.com/spatial-database-in-dbms">Spatial Database in DBMS</a>
+<a href="https://www.javatpoint.com/time-series-database">Time Series Database</a>
+<a href="https://www.javatpoint.com/why-should-you-learn-cpp-for-game-development">Why Should You Learn C++ for Game Development</a>
+<a href="https://www.javatpoint.com/challenges-of-database-security">Challenges of database security</a>
+<a href="https://www.javatpoint.com/definition-and-overview-of-odbms">Definition and overview of ODBMS</a>
+<a href="https://www.javatpoint.com/data-management-issues-in-mobile-database">Data Management Issues in Mobile Database</a>
+<a href="https://www.javatpoint.com/distributed-locking-in-database">Distributed Locking in Database</a>
+<a href="https://www.javatpoint.com/main-difference-between-timestamp-protocol-and-thomas-write-rule-in-dbms">Main Difference Between Timestamp Protocol and Thomas Write Rule in DBMS</a>
+<a href="https://www.javatpoint.com/recursive-relationship-in-er-diagrams">Recursive Relationship in ER Diagrams</a>
+<a href="https://www.javatpoint.com/structure-of-dbms">Structure of DBMS</a>
+<a href="https://www.javatpoint.com/consistency-in-dbms">Consistency in DBMS</a>
+<a href="https://www.javatpoint.com/dependency-in-dbms">Dependency in DBMS</a>
+<a href="https://www.javatpoint.com/distributed-database-system-in-dbms">Distributed Database System in DBMS</a>
+<a href="https://www.javatpoint.com/federated-database-management-system-issues">Federated Database Management System Issues</a>
+<a href="https://www.javatpoint.com/isolation-in-dbms">Isolation in DBMS</a>
+<a href="https://www.javatpoint.com/recovery-and-atomicity-in-dbms">Recovery and Atomicity in DBMS</a>
+<a href="https://www.javatpoint.com/difference-between-cntralized-decentralized-and-distributed-systems-in-dbms">Difference between Centralized, Decentralized and Distributed Systems in DBMS</a>
+<a href="https://www.javatpoint.com/types-of-sources-of-data-in-data-mining-in-dbms">Types of Sources of Data in Data Mining in DBMS</a>
+<a href="https://www.javatpoint.com/why-is-recovery-needed-in-dbms">Why is recovery needed in DBMS</a>
+<a href="https://www.javatpoint.com/dirty-read-in-sql-in-dbms">Dirty Read in SQL in DBMS</a>
+<a href="https://www.javatpoint.com/er-diagram-for-student-management-system">ER Diagram for Student Management System</a>
+<a href="https://www.javatpoint.com/er-diagram-for-the-airline-reservation-system">ER Diagram for the Airline Reservation System</a>
+<a href="https://www.javatpoint.com/er-diagram-for-the-university-management-system">ER Diagram for the University Management System</a>
+<a href="https://www.javatpoint.com/functions-of-distributed-database-system-in-dbms">Functions of Distributed Database System in DBMS</a>
+<a href="https://www.javatpoint.com/starvation-in-dbms">Starvation in DBMS</a>
+<a href="https://www.javatpoint.com/implementation-of-atomicity-and-durability-in-dbms">Implementation of Atomicity and Durability in DBMS</a>
+<a href="https://www.javatpoint.com/fully-functional-dependency-in-dbms">Fully-Functional Dependency in DBMS</a>
+<a href="https://www.javatpoint.com/partial-dependency-in-dbms">Partial Dependency in DBMS</a>
+<a href="https://www.javatpoint.com/characteristics-of-database-approach-in-dbms">Characteristics of Database approach in DBMS</a>
+<a href="https://www.javatpoint.com/strategies-for-migrating-from-sql-to-nosql-database">Strategies for Migrating from SQL to NoSQL Database</a>
+<a href="https://www.javatpoint.com/what-are-different-transaction-isolation-levels-in-dbms">What are Different Transaction Isolation Levels in DBMS</a>
+<a href="https://www.javatpoint.com/dbms-and-rdbms">DBMS and RDBMS</a>
+<a href="https://www.javatpoint.com/er-diagram-for-company-database">ER Diagram for Company Database</a>
+<a href="https://www.javatpoint.com/er-diagram-for-employee-management-system">ER Diagram for Employee Management System</a>
+<a href="https://www.javatpoint.com/transaction-isolation-levels-in-dbms">Transaction Isolation Levels in DBMS</a>
+<a href="https://www.javatpoint.com/transitive-dependency-in-dbms">Transitive Dependency in DBMS</a>
+<a href="https://www.javatpoint.com/advantages-and-disadvantages-of-distributed-system">Advantages and Disadvantages of Distributed System</a>
+<a href="https://www.javatpoint.com/data-management-issues-in-mobile-database">Data management issues in mobile database</a>
+<a href="https://www.javatpoint.com/advantages-and-disadvantages-of-er-model">Advantages and Disadvantages of ER Model</a>
+<a href="https://www.javatpoint.com/what-is-the-difference-between-oodbms-and-ordbms">What is the difference between OODBMS AND ORDBMS</a>
+<a href="https://www.javatpoint.com/how-to-create-and-call-a-stored-procedure-in-sql">How to Create and Call a Stored Procedure in SQL</a>
+<a href="https://www.javatpoint.com/introduction-to-temporal-database">Introduction to Temporal database</a>
+<a href="https://www.javatpoint.com/semantic-heterogeneity">Semantic Heterogeneity</a>
+<a href="https://www.javatpoint.com/why-is-a-candidate-key-called-a-minimal-super-key">Why is a candidate key called a minimal super key</a>
+<a href="https://www.javatpoint.com/three-tier-application-architecture">Three-Tier Application Architecture</a>
+<a href="https://www.javatpoint.com/what-is-3-2-1-backup-strategy">What is 3-2-1 Backup Strategy</a>
+<a href="https://www.javatpoint.com/differential-backup">Differential Backup</a>
+<a href="https://www.javatpoint.com/information-retrieval-in-dbms">Information Retrieval in DBMS</a>
+<a href="https://www.javatpoint.com/database-automation">Database Automation</a>
+<a href="https://www.javatpoint.com/advantages-of-relational-databases">Advantages of Relational Databases</a>
+<a href="https://www.javatpoint.com/ambiguous-column-name-in-dbms">Ambiguous Column Name in DBMS</a>
+<a href="https://www.javatpoint.com/ambiguous-column-name-in-snowflake">Ambiguous Column Name in Snowflake</a>
+<a href="https://www.javatpoint.com/differences-between-the-relational-model-and-the-document-model">Differences between the Relational model and the Document Model</a>
+<a href="https://www.javatpoint.com/difference-between-row-oriented-and-column-oriented-data-stores-dbms">Difference between row-oriented and column-oriented data stores dbms</a>
+<a href="https://www.javatpoint.com/null-and-not-null-in-sql">Null and not null in SQL</a>
+<a href="https://www.javatpoint.com/unique-and-distinct-differences-in-sql">Unique and Distinct Differences in SQL</a>
+<a href="https://www.javatpoint.com/difference-between-exist-and-not-exist-operator">Difference between Exist and Not-Exist Operator</a>
+<a href="https://www.javatpoint.com/inner-join-vs-outer-join">Inner join vs outer join</a>
+<a href="https://www.javatpoint.com/difference-between-in-and-between-operator">Difference between In and Between Operator</a>
+<a href="https://www.javatpoint.com/minimum-relations-satisfying-1nf">Minimum relations satisfying 1NF</a>
+<a href="https://www.javatpoint.com/why-recovery-is-needed-in-dbms">Why Recovery is Needed in DBMS</a>
+<a href="https://www.javatpoint.com/difficulties-of-implementing-data-warehouses">Difficulties of Implementing Data Warehouses</a>
+<a href="https://www.javatpoint.com/how-to-find-the-highest-normal-form-of-a-relation">How to find the Highest Normal Form of a Relation</a>
+<a href="https://www.javatpoint.com/difference-between-inverted-index-and-forward-index">Difference between Inverted Index and Forward Index</a>
+<a href="https://www.javatpoint.com/capturing-insert-timestamps-in-table-to-sql-server">Capturing Insert Timestamps in Table to SQL Server</a>
+<a href="https://www.javatpoint.com/cassandra-vs-dynamodb">Cassandra vs DynamoDB</a>
+<a href="https://www.javatpoint.com/characteristics-of-biological-data-genome-data-management">Characteristics of Biological Data (Genome Data Management)</a>
+<a href="https://www.javatpoint.com/convert-varchar-to-int-in-oracle">convert varchar to int in oracle</a>
+<a href="https://www.javatpoint.com/convert-varchar-to-number-in-oracle">convert varchar to number in oracle</a>
+<a href="https://www.javatpoint.com/difference-between-hadoop-and-rdbms">Difference between Hadoop and RDBMS</a>
+<a href="https://www.javatpoint.com/er-diagram-of-bank-management-system">ER diagram of Bank Management System</a>
+<a href="https://www.javatpoint.com/how-to-reset-identity-column-values-in-sql">How to Reset Identity Column Values in SQL</a>
+<a href="https://www.javatpoint.com/join-operation-vs-nested-query">Join Operation Vs Nested Query</a>
+<a href="https://www.javatpoint.com/sql-query-to-display-last-5-records-employee-table">SQL Query to Display Last 5 Records employee Table</a>
+<a href="https://www.javatpoint.com/thomas-write-rule-in-database-management-systems-dbms">Thomas Write Rule in Database Management Systems (DBMS)</a>
+<a href="https://www.javatpoint.com/web-information-retrieval-vector-space-model">Web Information Retrieval | Vector Space Model</a>
+<a href="https://www.javatpoint.com/char-vs-varchar-in-sql">CHAR vs VARCHAR in SQL</a>
+<a href="https://www.javatpoint.com/difference-between-database-and-dbms">Difference between Database and DBMS</a>
+<a href="https://www.javatpoint.com/difference-between-natural-join-and-inner-join-in-sql">Difference between Natural Join and Inner Join in SQL</a>
+<a href="https://www.javatpoint.com/how-dbms-stores-data">How DBMS Stores Data</a>
+<a href="https://www.javatpoint.com/how-do-keys-contribute-to-referential-integrity">How do Keys Contribute to Referential Integrity</a>
+<a href="https://www.javatpoint.com/what-is-query-rewriting-techniques-in-dbms">What is Query Rewriting Techniques in DBMS</a>
+<a href="https://www.javatpoint.com/what-is-record-at-a-time-in-dbms">What is Record-at-a-Time in DBMS</a>
+<a href="https://www.javatpoint.com/what-is-scalability-in-dbms-and-how-to-achieve-it">What is Scalability in DBMS and How to achieve it</a>
+<a href="https://www.javatpoint.com/what-is-user-authentication-in-dbms">What is user authentication in DBMS</a>
+<a href="https://www.javatpoint.com/blind-write-in-dbms">Blind Write in DBMS</a>
+<a href="https://www.javatpoint.com/differences-between-super-key-and-candidate-key">Differences between Super Key and Candidate Key</a>
+<a href="https://www.javatpoint.com/how-do-keys-assist-in-indexing-strategies">How do Keys Assist in Indexing Strategies</a>
+<a href="https://www.javatpoint.com/how-to-draw-an-er-diagram-in-dbms">How to draw an ER diagram in DBMS</a>
+<a href="https://www.javatpoint.com/what-is-transparent-dbms">What is Transparent DBMS</a>
+<a href="https://www.javatpoint.com/what-is-rdbms-kernel">What is RDBMS Kernel</a>
+<a href="https://www.javatpoint.com/what-is-temporal-query-language-tql">What is Temporal Query Language (TQL)</a>
+<a href="https://www.javatpoint.com/what-are-stand-alone-procedures">What are Stand-Alone Procedures</a>
+<a href="https://www.javatpoint.com/what-is-lock-escalation">What is Lock Escalation</a>
+<a href="https://www.javatpoint.com/how-dbms-performance-is-improved">How DBMS Performance is Improved</a>
+<a href="https://www.javatpoint.com/multivalued-dependency-and-fourth-normal-form">Multivalued Dependency and Fourth Normal Form</a>
+<a href="https://www.javatpoint.com/what-is-the-relationship-between-odbc-ole-db-and-ado">What is the relationship between ODBC, OLE DB, and ADO</a>
+<a href="https://www.javatpoint.com/difference-between-unique-and-unique-all">Difference between UNIQUE and UNIQUE All</a>
+<a href="https://www.javatpoint.com/what-is-a-record-in-dbms">What is a Record in DBMS</a>
+<a href="https://www.javatpoint.com/difference-between-super-key-and-candidate-key">Difference between Super key and Candidate key</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">SQL Introduction</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-sql-introduction">SQL Introduction</a>
+<a href="https://www.javatpoint.com/dbms-characteristics-of-sql">Characteristics of SQL</a>
+<a href="https://www.javatpoint.com/dbms-advantage-of-sql">Advantage of SQL</a>
+<a href="https://www.javatpoint.com/dbms-sql-datatype">SQl Datatype</a>
+<a href="https://www.javatpoint.com/dbms-sql-command">SQL Command</a>
+<a href="https://www.javatpoint.com/dbms-sql-operator">SQL Operator</a>
+<a href="https://www.javatpoint.com/dbms-sql-table">SQL Table</a>
+<a href="https://www.javatpoint.com/dbms-sql-select">SQL SELECT Statement</a>
+<a href="https://www.javatpoint.com/dbms-sql-insert">SQL INSERT Statement</a>
+<a href="https://www.javatpoint.com/dbms-sql-update">SQL Update Statement</a>
+<a href="https://www.javatpoint.com/dbms-sql-delete">SQL DELETE Statement</a>
+<a href="https://www.javatpoint.com/dbms-sql-view">SQL View</a>
+<a href="https://www.javatpoint.com/dbms-sql-index">SQL Index</a>
+<a href="https://www.javatpoint.com/dbms-sql-sub-queries">SQL Sub Queries</a>
+<a href="https://www.javatpoint.com/dbms-sql-clauses">SQL Clauses</a>
+<a href="https://www.javatpoint.com/dbms-sql-aggregate-function">SQL Aggregate Function</a>
+<a href="https://www.javatpoint.com/dbms-sql-joins">SQL JOIN</a>
+<a href="https://www.javatpoint.com/dbms-sql-set-operation">SQL Set Operation</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">DBMS MCQ</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-mcq">DBMS MCQ</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Interview Questions</span></h2>
+</div>
+<div class="leftmenu">
+<a href="https://www.javatpoint.com/dbms-interview-questions">DBMS Interview</a>
+<a href="https://www.javatpoint.com/sql-interview-questions">SQL Interview</a>
+</div>
+<img src="./DBMS 1NF - javatpoint_files/wh.JPG" alt="JavaTpoint">
+<br>
+<div class="adp_interactive_ad" style="width: 160px; height: 600px;"><div id="75781991-c109-4107-b6cd-bcaebbbb369d" class="_ap_apex_ad" data-section="75781991-c109-4107-b6cd-bcaebbbb369d" data-ad-type="docked" data-render-time="1720707913483" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_160X600_75781991-c109-4107-b6cd-bcaebbbb369d" style="text-align: center; margin: 0 auto;" data-google-query-id="CN_O07iYn4cDFXdNnQkdS9wM_g">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_160X600_75781991-c109-4107-b6cd-bcaebbbb369d");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/21929136915_0__container__" style="border: 0pt none; width: 160px; height: 0px;"></div></div></div></div></div>
+</div>
+<div class="onlycontent">
+<div class="onlycontentad">
+</div>
+<div class="onlycontentinner">
+<div id="city">
+<table>
+<tbody><tr><td><div id="ec7386ef-ccf8-43e2-86ff-11daabcf306e" data-section="ec7386ef-ccf8-43e2-86ff-11daabcf306e" class="_ap_apex_ad" data-xpath="#city &gt; table:eq(0) &gt; tbody:eq(0) &gt; tr:eq(0) &gt; td:eq(0)" data-section-id="" data-ap-network="adpTags" data-render-time="1720707913480" data-refresh-time="1720707913480" data-timeout="19" style="display: block; clear: both; text-align: center; margin: 10px auto 40px; width: 728px; height: 90px; overflow: hidden; visibility: visible;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_728X90_ec7386ef-ccf8-43e2-86ff-11daabcf306e" style="text-align: center; margin: 0 auto;" data-google-query-id="CNzO07iYn4cDFXdNnQkdS9wM_g">
+
+<div id="google_ads_iframe_/103512698,22511567001/22964681174_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/103512698,22511567001/22964681174_0" name="google_ads_iframe_/103512698,22511567001/22964681174_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" src="./DBMS 1NF - javatpoint_files/saved_resource.html"></iframe></div></div></div>
+<div id="bottomnextup">
+<a class="next" href="https://www.javatpoint.com/dbms-second-normal-form">next &#8594;</a>
+<a class="next" href="https://www.javatpoint.com/dbms-normalization">&#8592; prev</a>
+</div>
+<h1 class="h1">First Normal Form (1NF)</h1>
+<div id="08cbfb7a-e125-4873-a4b3-43e8b6ffe417" data-section="08cbfb7a-e125-4873-a4b3-43e8b6ffe417" class="_ap_apex_ad" data-xpath="#city &gt; table:eq(0) &gt; tbody:eq(0) &gt; tr:eq(0) &gt; td:eq(0) &gt; ul:eq(0)" data-section-id="" data-ap-network="custom" style="display: block; clear: both; text-align: center; margin: 10px auto 30px; width: 728px; height: 280px; overflow: hidden;"><div style="display: flex; gap: 20px;">
+<div id="00000001-46d20999-c6fd-419a-91e7-aa144a796323" class="_ap_apex_ad" style="width: 300px; height: 250px; text-align: center; margin: 0px auto; overflow: hidden; display: block; visibility: visible;" data-section="00000001-46d20999-c6fd-419a-91e7-aa144a796323" data-orig-id="754e61fd-56bb-458c-bd01-cd1dcfc452e7" data-render-time="1720707913466" data-ap-network="adpTags" data-refresh-time="1720707913467" data-timeout="16"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div>
+<script>
+var adpushup = window.adpushup = window.adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("754e61fd-56bb-458c-bd01-cd1dcfc452e7");
+});
+</script>
+<div id="ADP_37780_300x250_00000001-46d20999-c6fd-419a-91e7-aa144a796323" style="text-align: center; margin: 0 auto;" data-google-query-id="CN3O07iYn4cDFXdNnQkdS9wM_g">
+
+<div id="google_ads_iframe_/103512698,22511567001/23005642193_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/103512698,22511567001/23005642193_0" name="google_ads_iframe_/103512698,22511567001/23005642193_0" title="3rd party ad content" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="3" style="border: 0px; vertical-align: bottom;" src="./DBMS 1NF - javatpoint_files/saved_resource(1).html"></iframe></div></div></div>
+<div id="00000001-614a8dff-e68d-4855-b9a2-8abe7fb58c58" class="_ap_apex_ad" style="width: 0px; height: 0px; text-align: center; margin: 0px auto; overflow: hidden; display: block; visibility: hidden;" data-section="00000001-614a8dff-e68d-4855-b9a2-8abe7fb58c58" data-orig-id="754e61fd-56bb-458c-bd01-cd1dcfc452e7" data-render-time="1720707913470" data-ap-network="adpTags" data-refresh-time="1720707913470" data-timeout="18"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div>
+<script>
+var adpushup = window.adpushup = window.adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("754e61fd-56bb-458c-bd01-cd1dcfc452e7");
+});
+</script>
+<div id="ADP_37780_300x250_00000001-614a8dff-e68d-4855-b9a2-8abe7fb58c58" style="text-align: center; margin: 0 auto;" data-google-query-id="CN7O07iYn4cDFXdNnQkdS9wM_g">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_300x250_00000001-614a8dff-e68d-4855-b9a2-8abe7fb58c58");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/23005642193_1__container__" style="border: 0pt none; width: 300px; height: 0px;"></div></div></div>
+</div></div><ul class="points">
+<li>A relation will be 1NF if it contains an atomic value. </li>
+<li>It states that an attribute of a table cannot hold multiple values. It must hold only single-valued attribute.</li>
+<li>First normal form disallows the multi-valued attribute, composite attribute, and their combinations.</li>
+</ul>
+<p><strong>Example:</strong> Relation EMPLOYEE is not in 1NF because of multi-valued attribute EMP_PHONE.</p>
+<p><strong>EMPLOYEE table:</strong></p>
+<table class="alt">
+<tbody><tr>
+<th>EMP_ID</th>
+<th>EMP_NAME</th>
+<th>EMP_PHONE</th>
+<th>EMP_STATE</th>
+</tr>
+<tr>
+<td>14</td>
+<td>John</td>
+<td>7272826385,<br>
+9064738238</td>
+<td>UP</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Harry</td>
+<td>8574783832</td>
+<td>Bihar</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Sam</td>
+<td>7390372389,<br>
+8589830302</td>
+<td>Punjab</td>
+</tr>
+</tbody></table>
+<p>The decomposition of the EMPLOYEE table into 1NF has been shown below:</p>
+<table class="alt">
+<tbody><tr>
+<th>EMP_ID</th>
+<th>EMP_NAME</th>
+<th>EMP_PHONE</th>
+<th>EMP_STATE</th>
+</tr>
+<tr>
+<td>14</td>
+<td>John</td>
+<td>7272826385</td>
+<td>UP</td>
+</tr>
+<tr>
+<td>14</td>
+<td>John</td>
+<td>9064738238</td>
+<td>UP</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Harry</td>
+<td>8574783832</td>
+<td>Bihar</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Sam</td>
+<td>7390372389</td>
+<td>Punjab</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Sam</td>
+<td>8589830302</td>
+<td>Punjab</td>
+</tr>
+</tbody></table>
+<br>
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="https://www.javatpoint.com/dbms-second-normal-form">DBMS 2NF</a></span>
+</div>
+
+<br><br>
+<div id="bottomnext">
+<a style="float:left" class="next" href="https://www.javatpoint.com/dbms-normalization">&#8592; prev</a>
+<a style="float:right" class="next" href="https://www.javatpoint.com/dbms-second-normal-form">next &#8594;</a>
+</div>
+<br><br>
+<div id="ec6a6cf5-fc13-49db-ba4d-536d2da4a05e" data-section="ec6a6cf5-fc13-49db-ba4d-536d2da4a05e" class="_ap_apex_ad" data-xpath="#city &gt; table:eq(0) &gt; tbody:eq(0) &gt; tr:eq(0) &gt; td:eq(0)" data-section-id="" data-ap-network="custom" style="display: block; clear: both; text-align: center; margin: 10px auto 30px; width: 728px; height: 280px; overflow: hidden;"></div></td></tr>
+</tbody></table>
+</div>
+<hr class="hrhomebox">
+<div><img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube">
+<span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span>
+</div>
+<hr class="hrhomebox">
+<h3 class="h3">Feedback</h3>
+<ul class="points">
+<li>Send your Feedback to feedback@javatpoint.com</li>
+</ul>
+<hr class="hrhomebox">
+<h2 class="h2">Help Others, Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/dbms-first-normal-form"><img src="./DBMS 1NF - javatpoint_files/facebook32.png" alt="facebook"></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/dbms-first-normal-form"><img src="./DBMS 1NF - javatpoint_files/twitter32.png" alt="twitter"></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/dbms-first-normal-form"><img src="./DBMS 1NF - javatpoint_files/pinterest32.png" alt="pinterest"></a>
+
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Learn Latest Tutorials</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/splunk">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial">
+<p>Splunk</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/spss">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial">
+<p>SPSS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/swagger">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial">
+<p>Swagger</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/t-sql">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial">
+<p>Transact-SQL</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/tumblr">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial">
+<p>Tumblr</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial">
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/regex">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial">
+<p>Regex</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reinforcement-learning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial">
+<p>Reinforcement Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/r-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial">
+<p>R Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/rxjs">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial">
+<p>RxJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/react-native-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial">
+<p>React Native</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-design-pattern">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns">
+<p>Python Design Patterns</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-pillow">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial">
+<p>Python Pillow</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-turtle-programming">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial">
+<p>Python Turtle</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/keras">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial">
+<p>Keras</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Preparation</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/aptitude/quantitative">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude">
+<p>Aptitude</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reasoning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning">
+<p>Reasoning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/verbal-ability">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability">
+<p>Verbal Ability</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/interview-questions-and-answers">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions">
+<p>Interview Questions</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions">
+<p>Company Questions</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">Trending Technologies</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/artificial-intelligence-ai">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence">
+<p>Artificial Intelligence</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/aws-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial">
+<p>AWS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/selenium-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial">
+<p>Selenium</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cloud-computing">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing">
+<p>Cloud Computing</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/hadoop-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial">
+<p>Hadoop</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial">
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-science">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial">
+<p>Data Science</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/angular-7-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial">
+<p>Angular 7</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/blockchain-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial">
+<p>Blockchain</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/git">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial">
+<p>Git</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/machine-learning">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial">
+<p>Machine Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/devops">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial">
+<p>DevOps</p>
+</div>
+</a>
+</div>
+<div id="6ca6d51c-1343-41d3-aecf-8c2dd4615174" data-section="6ca6d51c-1343-41d3-aecf-8c2dd4615174" class="_ap_apex_ad" data-xpath=".onlycontentinner &gt; fieldset:eq(2)" data-section-id="" data-ap-network="adpTags" data-render-time="1720707913474" style="display: block; clear: both; text-align: center; margin: 10px auto; width: 0px; height: 0px; overflow: hidden; visibility: hidden;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_728X280_6ca6d51c-1343-41d3-aecf-8c2dd4615174" style="text-align: center; margin: 0 auto;" data-google-query-id="CPOwgriYn4cDFVJcnQkdyF0DPQ">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_728X280_6ca6d51c-1343-41d3-aecf-8c2dd4615174");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22987854509_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div></div></div></fieldset>
+<hr class="hrhomebox">
+
+<fieldset class="gra1">
+<h2 class="h3">B.Tech / MCA</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/dbms-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial">
+<p>DBMS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-structure-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial">
+<p>Data Structures</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/daa-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial">
+<p>DAA</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/operating-system">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System">
+<p>Operating System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-network-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial">
+<p>Computer Network</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/compiler-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial">
+<p>Compiler Design</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture">
+<p>Computer Organization</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/discrete-mathematics-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial">
+<p>Discrete Mathematics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/ethical-hacking">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking">
+<p>Ethical Hacking</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-graphics-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial">
+<p>Computer Graphics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/software-engineering">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering ">
+<p>Software Engineering</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/html-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial">
+<p>Web Technology</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cyber-security-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial">
+<p>Cyber Security</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/automata-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial">
+<p>Automata</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/c-programming-language-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial">
+<p>C Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cpp-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial">
+<p>C++</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/java-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/new/core-java.png" alt="Java tutorial">
+<p>Java</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/net-framework">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial">
+<p>.Net</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial">
+<p>Python</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/programs-list">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs">
+<p>Programs</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/control-system-tutorial">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial">
+<p>Control System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-mining">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial">
+<p>Data Mining</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-warehouse">
+<div class="homecontent"><img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial">
+<p>Data Warehouse</p>
+</div>
+</a>
+</div>
+</fieldset>
+</div>
+<br><br><div class="mobilemenu" style="clear:both">
+</div><div id="24b6c9a1-17e1-4c1c-8269-7327b94d89a3" data-section="24b6c9a1-17e1-4c1c-8269-7327b94d89a3" class="_ap_apex_ad" data-xpath=".onlycontent" data-section-id="" data-ap-network="custom" style="display: block; clear: both; text-align: center; margin: 10px auto 30px; width: 728px; height: 250px; overflow: hidden;"></div></div>
+<div id="right">
+<br><br>
+<div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained1" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained1" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913488" data-ap-network="adpTags" data-refresh-time="1720707913488" data-timeout="22" style="background: transparent; width: 336px; height: 280px; display: block; text-align: center; visibility: visible;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained1" style="text-align: center; margin: 0 auto;" data-google-query-id="CODO07iYn4cDFXdNnQkdS9wM_g">
+
+<div id="google_ads_iframe_/103512698,22511567001/22946317061_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/103512698,22511567001/22946317061_0" name="google_ads_iframe_/103512698,22511567001/22946317061_0" title="3rd party ad content" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="6" style="border: 0px; vertical-align: bottom;" src="./DBMS 1NF - javatpoint_files/saved_resource(2).html"></iframe></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 300px; height: 600px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained2" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained2" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913490" data-ap-network="adpTags" style="background: transparent; width: 300px; height: 600px; display: block; text-align: center; visibility: visible; position: fixed; top: 0px; z-index: 0; bottom: auto; margin: 10px 0px 0px;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained2" style="text-align: center; margin: 0 auto;" data-google-query-id="COHO07iYn4cDFXdNnQkdS9wM_g">
+
+<div id="google_ads_iframe_/103512698,22511567001/22946271133_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/103512698,22511567001/22946271133_0" name="google_ads_iframe_/103512698,22511567001/22946271133_0" title="3rd party ad content" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="7" style="border: 0px; vertical-align: bottom;" src="./DBMS 1NF - javatpoint_files/saved_resource(3).html"></iframe></div></div></div></div><div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained3" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained3" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913504" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained3" style="text-align: center; margin: 0 auto;" data-google-query-id="COLO07iYn4cDFXdNnQkdS9wM_g">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained3");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946938482_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained4" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained4" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913506" data-ap-network="adpTags" style="background: transparent; width: 300px; height: 250px; display: block; text-align: center; visibility: visible; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained4" style="text-align: center; margin: 0 auto;" data-google-query-id="CI68obmYn4cDFTZbnQkdJ-0Kqw">
+
+<div id="google_ads_iframe_/103512698,22511567001/22946317064_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/103512698,22511567001/22946317064_0" name="google_ads_iframe_/103512698,22511567001/22946317064_0" title="3rd party ad content" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="9" style="border: 0px; vertical-align: bottom;" src="./DBMS 1NF - javatpoint_files/saved_resource(4).html"></iframe></div></div></div></div><div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained5" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained5" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913508" data-ap-network="adpTags" style="background: transparent; width: 336px; height: 280px; display: block; text-align: center; visibility: visible;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained5" style="text-align: center; margin: 0 auto;" data-google-query-id="CI-8obmYn4cDFTZbnQkdJ-0Kqw">
+
+<div id="google_ads_iframe_/103512698,22511567001/22946271166_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/103512698,22511567001/22946271166_0" name="google_ads_iframe_/103512698,22511567001/22946271166_0" title="3rd party ad content" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="a" style="border: 0px; vertical-align: bottom;" src="./DBMS 1NF - javatpoint_files/saved_resource(5).html"></iframe></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained6" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained6" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913512" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained6" style="text-align: center; margin: 0 auto;" data-google-query-id="CJC8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained6");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946271136_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained7" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained7" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913515" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained7" style="text-align: center; margin: 0 auto;" data-google-query-id="CJG8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained7");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946930751_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained8" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained8" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913519" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained8" style="text-align: center; margin: 0 auto;" data-google-query-id="CJK8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained8");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946271169_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained9" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained9" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913521" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained9" style="text-align: center; margin: 0 auto;" data-google-query-id="CJO8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained9");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946271172_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained10" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained10" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913523" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained10" style="text-align: center; margin: 0 auto;" data-google-query-id="CJS8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained10");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946317067_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained11" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained11" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913525" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained11" style="text-align: center; margin: 0 auto;" data-google-query-id="CJW8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained11");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946271139_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained12" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained12" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913528" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained12" style="text-align: center; margin: 0 auto;" data-google-query-id="CJa8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained12");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946938485_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained13" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained13" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913539" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained13" style="text-align: center; margin: 0 auto;" data-google-query-id="CJe8obmYn4cDFTZbnQkdJ-0Kqw">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained13");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946317070_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained14" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained14" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913542" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained14" style="text-align: center; margin: 0 auto;" data-google-query-id="CLj5wrmYn4cDFcNtnQkd_zwD1g">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained14");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946271175_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div><div class="adp_interactive_ad" style="min-height: 1346px; width: 336px; height: 280px;"><div id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained15" class="_ap_apex_ad" data-section="14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained15" data-ad-type="chained-docked" data-orig-id="14733a6a-61a6-4f7c-ab84-e1b74a4bf908" data-render-time="1720707913546" data-ap-network="adpTags" style="background: transparent; width: 0px; height: 0px; display: block; text-align: center; visibility: hidden; position: relative;"><div data-nosnippet="false" style="font-size: 11px; margin: 0px auto; width: auto; color: rgb(188, 191, 197); text-align: center; background-color: transparent;">ADVERTISEMENT</div><div id="ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained15" style="text-align: center; margin: 0 auto;" data-google-query-id="CLn5wrmYn4cDFcNtnQkd_zwD1g">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_37780_336X280_14733a6a-61a6-4f7c-ab84-e1b74a4bf908_chained15");
+});
+</script>
+<div id="google_ads_iframe_/103512698,22511567001/22946271142_0__container__" style="border: 0pt none; width: 336px; height: 0px;"></div></div></div></div></div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;">
+
+</div>
+<br>
+<div id="footer" style="clear:both;width:100%">
+<script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="./DBMS 1NF - javatpoint_files/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="./DBMS 1NF - javatpoint_files/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="./DBMS 1NF - javatpoint_files/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="./DBMS 1NF - javatpoint_files/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="./DBMS 1NF - javatpoint_files/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com/"><img src="./DBMS 1NF - javatpoint_files/blog.png" alt="Blog Page"></a> </div><footer class="footer1"><div class="column4"><h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a></div><div class="column4"><h3>Interview Questions</h3><a href="https://www.javatpoint.com/corejava-interview-questions">Java Interview Questions</a><a href="https://www.javatpoint.com/sql-interview-questions">SQL Interview Questions</a><a href="https://www.javatpoint.com/python-interview-questions">Python Interview Questions</a><a href="https://www.javatpoint.com/javascript-interview-questions">JavaScript Interview Questions</a><a href="https://www.javatpoint.com/top-angular-interview-questions">Angular Interview Questions</a><a href="https://www.javatpoint.com/selenium-interview-questions">Selenium Interview Questions</a><a href="https://www.javatpoint.com/spring-boot-interview-questions">Spring Boot Interview Questions</a><a href="https://www.javatpoint.com/job-interview-questions">HR Interview Questions</a><a href="https://www.javatpoint.com/cpp-interview-questions">C++ Interview Questions</a><a href="https://www.javatpoint.com/data-structure-interview-questions">Data Structure Interview Questions</a></div><div class="column4"><h3>About</h3><p>This website is developed to help students on various technologies such as Artificial Intelligence, Machine Learning, C, C++, Python, Java, PHP, HTML, CSS, JavaScript, jQuery, ReactJS, Node.js, AngularJS, Bootstrap, XML, SQL, PL/SQL, MySQL etc. </p><p>This website provides tutorials with examples, code snippets, and practical insights, making it suitable for both beginners and experienced developers.</p><p>There are also many interview questions which will help students to get placed in the companies.</p></div><div class="column4"><h3>Contact</h3><a href="https://www.javatpoint.com/contact-us">Contact Us</a>  <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a><br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a></div></footer><footer class="footer2"><p>� Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by Tpoint Tech.</p></footer><div id="bot-root"><script src="https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0"></script></div><script> (function() { var e = document.createElement('script'); e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0'; document.getElementById('bot-root').appendChild(e);}());</script>
+</div>
+
+</div>
+<script src="./DBMS 1NF - javatpoint_files/shcoreandbrush.js.download"></script><script type="text/javascript" src="./DBMS 1NF - javatpoint_files/google.js.download"></script>
+<script> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+<script src="./DBMS 1NF - javatpoint_files/lazysizes.min.js.download" async=""></script><iframe src="./DBMS 1NF - javatpoint_files/container.html" style="visibility: hidden; display: none;"></iframe>
+  <iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;" src="./DBMS 1NF - javatpoint_files/saved_resource(6).html"></iframe><table cellspacing="0" cellpadding="0" role="presentation" class="gstl_50 gssb_c" style="width: 165px; display: none; top: 32px; left: 253px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" role="presentation" class="gstl_51 gssb_c" style="width: 2px; display: none; top: 3px; left: -1px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe src="./DBMS 1NF - javatpoint_files/iu3.html" style="display: none;"></iframe><iframe name="__tcfapiLocator" src="./DBMS 1NF - javatpoint_files/saved_resource(7).html" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="./DBMS 1NF - javatpoint_files/saved_resource(8).html" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="./DBMS 1NF - javatpoint_files/saved_resource(9).html" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><script src="./DBMS 1NF - javatpoint_files/777(1)"></script><img height="1" width="1" src="./DBMS 1NF - javatpoint_files/halo_match" alt="" style="display: none;"><img height="1" width="1" src="./DBMS 1NF - javatpoint_files/ip_match" alt="" style="display: none;"><script type="text/javascript" src="./DBMS 1NF - javatpoint_files/getpixels" async=""></script><iframe src="./DBMS 1NF - javatpoint_files/join-ad-interest-groups.html" allow="join-ad-interest-group; attribution-reporting" style="display: none;"></iframe></body><iframe name="goog_topics_frame" src="./DBMS 1NF - javatpoint_files/topics_frame.html" style="display: none;"></iframe><iframe sandbox="allow-scripts allow-same-origin" id="1332f6086885c922f" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/beacon.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1333fb132433cf7b6" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/sync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1334842643127a122" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/saved_resource(10).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="133512dac2dbdf348" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/async_usersync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1336274aad636ccfa" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/isyn.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1337bc9c031218ecd" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/usync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="133809959f2486f92" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/user_sync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1339613b53a8652a3" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/saved_resource(11).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="13408d004bcb5d661" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/visitormatch.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1341cfff964789f03" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/ixmatch.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1342d52af52faa13d" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/iframe.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="134352948c9083c54" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./DBMS 1NF - javatpoint_files/sync(2).html">
+    </iframe></html>
